@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby AI</title>
+</head>
+
+<body>
+  <div class="root"></div>
+  <form>
+    <input type="button" onclick="javascript:render(svgDOM, svg())" value="Guess">
+    <input type="range" min="1" max="1000000" name="exampleCount" id="exampleCount">
+    <input type="button" onclick="javascript:teach(exampleCount.value)" value="Train">
+    <div>Accuracy is : <span class="percent">Not tested</span></div>
+  </form>
+
+  <script src="library.js"></script>
+  <script src="babyAI.js"></script>
+</body>
+
+</html>
