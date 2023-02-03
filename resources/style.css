@@ -1,0 +1,84 @@
+:root {
+  --color: #282828;
+  --back: #fbf1c7;
+  --back-1: #ebdbb2;
+  --back-2: #f2e5bc;
+  --orange: #d65d0e;
+  --red: #cc241d;
+}
+
+* {
+  user-select: none;
+  font-family: "ubuntu";
+  box-sizing: border-box;
+}
+h1 {
+  font-weight: 400;
+  font-size: x-large;
+}
+body {
+  margin: 0;
+  color: var(--color);
+  background: var(--back) radial-gradient(var(--back-1) 2px, transparent 2px)
+    center 0 / 25px 25px;
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+img[alt="logo"] {
+  width: 100px;
+}
+
+header {
+  padding: 48px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  background: var(--back);
+}
+main {
+  position: relative;
+  padding: 24px;
+  background: var(--back-2);
+  max-width: 500px;
+  margin: auto;
+  width: 80vw;
+  border-bottom:4px solid var(--back-1);
+}
+
+main::before,main::after {
+  --width: 4px;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 5px,
+    var(--orange) 5px,
+    var(--orange) 10px
+  );
+  display: block;
+  width: var(--width);
+  height: 100%;
+}
+
+main::after{
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 5px,
+    var(--orange) 5px,
+    var(--orange) 10px
+  );
+  left: auto;
+  right:0px;
+}
